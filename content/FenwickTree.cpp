@@ -1,14 +1,7 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define ll long long
-#define vi vector<int>
-#define pii pair<int, int>
-#define sz(x) (int)(x).size()
-
 /** Fenwick Tree
  * Dans les commentaires, le vecteur v représente le vecteur abstrait (0-indexed), et non le vecteur réel (1-indexed).
 **/
+
 struct FenwickTree {
 	vector<ll> v;
 	FenwickTree (int n) : v(n+1, 0ll) {}
