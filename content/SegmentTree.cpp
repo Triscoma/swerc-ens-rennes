@@ -10,12 +10,12 @@ using namespace std;
 **/
 struct SegmentTree {
 	using T = int;
-	static constexpr T neutral = 0;
+	static constexpr T neutre = 0;
 	T f(T a, T b) { return max(a, b); }
 
 	int n;
 	vector<T> v;
-	SegmentTree(int n, T x = neutral) : n(n), v(2 * n, x) {}
+	SegmentTree(int n) : n(n), v(2 * n, neutre) {}
 
 	// v[i] <- x
 	void set(int i, T x) {
@@ -27,7 +27,7 @@ struct SegmentTree {
 	// f(v[l], .., v[r-1])
 	T get(int l, int r) {
 		l += n; r += n;
-		T l_ans = neutral, r_ans = neutral;
+		T l_ans = neutre, r_ans = neutre;
 		while (l < r) {
 			if (l % 2) l_ans = f(l_ans, v[l++]);
 			if (r % 2) r_ans = f(v[--r], r_ans);
