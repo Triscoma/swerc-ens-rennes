@@ -1,5 +1,6 @@
 /** Segment Tree
 **/
+
 struct SegmentTree {
 	using T = int;
 	static constexpr T neutre = 0;
