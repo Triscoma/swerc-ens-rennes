@@ -1,12 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define ll long long
-#define vi vector<int>
-#define pii pair<int, int>
-#define sz(x) (int)(x).size()
-
-
 /** Builtin functions
  * Fonctions utiles pour manipuler les entiers bit à bit
  * ajouter ll à la fin pour passer un long long en argument (ex : __bultin_popcountll(x))
