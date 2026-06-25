@@ -11,7 +11,7 @@ using namespace std;
  * Fonctions utiles pour manipuler les entiers bit à bit
  * Quelques astuces : 
  * floor(log2(x)) = 31 - __builtin_clz(x),  si x > 0
- * v2(x) = __builtin_ctz(x&-x)
+ * v2(x) = __builtin_ctz(x&-x), si x > 0
 **/
 
 int x;
