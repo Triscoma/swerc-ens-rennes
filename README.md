@@ -1,2 +1,2 @@
 # swerc-ens-rennes
-Notebook for the SWERC
+Fiche de pompe pour le SWERC
