@@ -1,4 +1,5 @@
 /** Arithmétique modulaire
+ * Pour inv(a, b), si b est premier, faire fast_exp_mod(a, b-2, b) suffit.
 **/
 
 ll fast_exp_mod(ll a, ll e, int md) {
