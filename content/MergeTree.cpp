@@ -23,7 +23,7 @@ struct MergeTree {
 		int ans = 0;
 		auto f = [&](int i){
 			auto begin = tree.begin() + pos[i];
-      auto end = begin + len[i];
+      		auto end = begin + len[i];
 			auto it_a = lower_bound(begin, end, a);
 			auto it_b = upper_bound(begin, end, b);
 			return it_b - it_a;
