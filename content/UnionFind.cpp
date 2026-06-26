@@ -7,9 +7,14 @@ struct UnionFind {
 
 	int size(int x) { return -e[find(x)]; }
 
-	int find(int x) { return e[x] < 0 ? x : find(e[x]); }
+	int Find(int x) { 
+		if (e[x] < 0) return x;
+		int p = find(e[x]);
+		e[x] = p;
+		return p;
+	}
 
-	bool join(int a, int b) {
+	bool Union(int a, int b) {
 		a = find(a); b = find(b);
 		if (a == b) return false;
 		if (e[a] > e[b]) swap(a, b);
