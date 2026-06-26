@@ -33,7 +33,7 @@ struct MergeTree {
 		
 		int ans = 0
 		l += n; r += n;
-		while (l < r;) {
+		while (l < r) {
 			if (l & 1) ans += f(l++);
 			if (r & 1) ans += f(--r);
 			l >>= 1; r >>= 1;
