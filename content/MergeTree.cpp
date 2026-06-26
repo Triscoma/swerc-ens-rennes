@@ -1,9 +1,11 @@
 /** Merge Sort Tree
+ * changer f pour calculer autre chose
 **/
 
 struct MergeTree {
 	int n; 
-  vi tree, pos, len;
+  	vi tree, pos, len;
+
 	MergeTree(vi& v) : n(sz(v)), tree(n), pos(2*n), len(2*n) {
 		tree.reserve(31 * 2e5);
 		for (int i = 0; i < n; i++) {
@@ -19,8 +21,8 @@ struct MergeTree {
 			merge(L, L + len[l], R, R + len[r], back_inserter(tree));
 		}
 	}
+
 	int query(int l, int r, int a, int b) { // #{i | l <= i < r et a <= v[i] <= b}
-		int ans = 0;
 		auto f = [&](int i){
 			auto begin = tree.begin() + pos[i];
       		auto end = begin + len[i];
@@ -28,9 +30,13 @@ struct MergeTree {
 			auto it_b = upper_bound(begin, end, b);
 			return it_b - it_a;
 		};
-		for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
+		
+		int ans = 0
+		l += n; r += n;
+		while (l < r;) {
 			if (l & 1) ans += f(l++);
 			if (r & 1) ans += f(--r);
+			l >>= 1; r >>= 1;
 		}
 		return ans;
 	}
