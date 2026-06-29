@@ -1,6 +1,5 @@
 /** Union-Find 
 **/
-
 struct UnionFind {
 	vi e;
 	UnionFind(int n) : e(n, -1) {}
