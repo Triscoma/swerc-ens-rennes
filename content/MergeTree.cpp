@@ -1,7 +1,6 @@
 /** Merge Sort Tree
  * changer f pour calculer autre chose
 **/
-
 struct MergeTree {
 	int n; 
   	vi tree, pos, len;
@@ -22,7 +21,8 @@ struct MergeTree {
 		}
 	}
 
-	int query(int l, int r, int a, int b) { // #{i | l <= i < r et a <= v[i] <= b}
+	// renvoie #{i | l <= i < r et a <= v[i] <= b}
+	int get(int l, int r, int a, int b) { 
 		auto f = [&](int i){
 			auto begin = tree.begin() + pos[i];
       		auto end = begin + len[i];
