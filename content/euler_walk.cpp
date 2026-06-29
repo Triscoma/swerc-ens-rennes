@@ -10,7 +10,7 @@
  * Si g n'est pas connexe, la taille de la sortie est différente de m+1
  * /!\ NON TESTE pour les chemins ni pour les graphes orientés
 **/
-vi euler_walk(int n, int m, vector<vector<pii>> g, int s) {
+vi euler_walk(int m, vector<vector<pii>> g, int s) {
 	vi tour;
 	vector<bool> seen(m);
 	function<void(int)> dfs = [&](int u) {
