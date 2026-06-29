@@ -4,7 +4,6 @@
 struct MergeTree {
 	int n; 
   	vi tree, pos, len;
-
 	MergeTree(vi& v) : n(sz(v)), tree(n), pos(2*n), len(2*n) {
 		tree.reserve(31 * 2e5);
 		for (int i = 0; i < n; i++) {
@@ -20,7 +19,6 @@ struct MergeTree {
 			merge(L, L + len[l], R, R + len[r], back_inserter(tree));
 		}
 	}
-
 	// renvoie #{i | l <= i < r et a <= v[i] <= b}
 	int get(int l, int r, int a, int b) { 
 		auto f = [&](int i){
@@ -30,7 +28,6 @@ struct MergeTree {
 			auto it_b = upper_bound(begin, end, b);
 			return it_b - it_a;
 		};
-		
 		int ans = 0
 		l += n; r += n;
 		while (l < r) {
