@@ -1,5 +1,5 @@
 /** Parcours Eulerien
- * n = nombre de sommets de g, m = nombre d'arrêtes de g, g = graphe MIROIR (g lui-même si non-orienté), s = sommet de départ
+ * m = nombre d'arrêtes de g, g = graphe MIROIR (g lui-même si non-orienté), s = sommet de départ
  * g[i] = vecteur de couples {voisin, id_arete}
  * Hypothèses : 
  *    - Soit pour tout i appartenant à la composante connexe de s, g[i] est de taille paire
