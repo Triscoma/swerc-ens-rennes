@@ -12,7 +12,7 @@ struct PersistentTree {
 		int l; int r;
 		T val;	
 		Node* left = nullptr; Node* right = nullptr;
-		Node(const Node* other) : Node(*other) {assert(other);}
+		Node(const Node* other) : Node(*other) {}
 		Node(int l_, int r_, T val_=neutral) : l(l_), r(r_), val(val_) {}
 		Node(vector<T>& v, int l_, int r_) : l(l_), r(r_) {
 			if (l == r-1) {
