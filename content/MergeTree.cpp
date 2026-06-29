@@ -12,7 +12,7 @@ struct MergeTree {
 			len[i + n] = 1;
 		}
 		for (int i = n-1; i >= 1; i--) {
-			int l = 2 * i, r = 2 * i + 1;
+			int l = i << 1; int r = l+1;
 			pos[i] = sz(tree);
 			len[i] = len[l] + len[r];
 			auto L = tree.begin() + pos[l], R = tree.begin() + pos[r];
