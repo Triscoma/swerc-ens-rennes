@@ -11,8 +11,7 @@ struct SegmentTree {
 	SegmentTree(int n) : n(n), v(2 * n, neutral) {}
 	// v[i] <- x
 	void set(int i, T x) {
-		i += n;
-		v[i] = x;
+		v[i += n] = x;
 		while (i /= 2) v[i] = f(v[2 * i], v[2 * i + 1]);
 	}
 	// f(v[l], .., v[r-1])
