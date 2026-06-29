@@ -5,7 +5,6 @@
  * changer null_type pour avoir une ordered_map à la place
  * prendre T = pii pour avoir un multiset
 **/
-
 #include<bits/extc++.h>
 using namespace __gnu_pbds;
 
