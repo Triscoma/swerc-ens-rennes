@@ -15,11 +15,11 @@ struct PersistentTree {
 		Node(const Node* other) : Node(*other) {}
 		Node(int l_, int r_, T val_=neutral) : l(l_), r(r_), val(val_) {}
 		Node(vector<T>& v, int l_, int r_) : l(l_), r(r_) {
-			if (l == r-1) {
-				val = v[l];
+			int m = l + (r - l)/2;
+			if (m == l) {
+				val = v[m];
 				return;
 			}
-			int m = l + (r - l)/2;
 			left = new Node(v, l, m); right = new Node(v, m, r);	
 			val = f(left->val, right->val);
 		}
