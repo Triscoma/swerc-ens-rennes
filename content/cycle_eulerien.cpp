@@ -1,9 +1,10 @@
 /** Cycle Eulerien
  * n = nombre de sommets de g, m = nombre d'arrêtes de g, g = graphe, s = sommet de départ
  * g[i] = vecteur de couples {voisin, id_arete}
- * Hypothèse : pour tout i appartenant à la composante connexe de s, g[i] est de taille paire (sinon il n'existe pas de cycle eulérien)
+ * Hypothèse : pour tout i appartenant à la composante connexe de s (TODO : à définir pour les graphes orientés), g[i] est de taille paire (sinon il n'existe pas de cycle eulérien)
  * Renvoie un cycle eulérien de la composante connexe de s sous forme de vecteur (le premier et le dernier éléments sont égaux)
  * Si g n'est pas connexe, la taille de la sortie est différente de m+1
+ * TODO : adapter pour qu'on puisse aussi renvoyer des chemins eulériens
 **/
 vi euler_tour(int n, int m, vector<vector<pii>> g, int s) {
 	vi tour;
