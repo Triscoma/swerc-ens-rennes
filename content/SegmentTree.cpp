@@ -8,22 +8,23 @@ struct SegmentTree {
 
 	int n;
 	vector<T> v;
-	SegmentTree(int n) : n(n), v(2 * n, neutral) {}
+	SegmentTree(int n) : n(n), v(2*n, neutral) {}
+
 	// v[i] <- x
 	void set(int i, T x) {
 		v[i += n] = x;
-		while (i /= 2) v[i] = f(v[2 * i], v[2 * i + 1]);
+		while (i >>= 1) v[i] = f(v[i << 1], v[i << 1 | 1]);
 	}
+
 	// f(v[l], .., v[r-1])
 	T get(int l, int r) {
 		l += n; r += n;
 		T l_ans = neutral, r_ans = neutral;
 		while (l < r) {
-			if (l % 2) l_ans = f(l_ans, v[l++]);
-			if (r % 2) r_ans = f(v[--r], r_ans);
-			l /= 2; r /= 2;
+			if (l & 1) l_ans = f(l_ans, v[l++]);
+			if (r & 1) r_ans = f(v[--r], r_ans);
+			l >>= 1; r >>= 1;
 		}
 		return f(l_ans, r_ans);
 	}
 };
-
