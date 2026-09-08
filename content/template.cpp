@@ -6,7 +6,12 @@ using namespace std;
 #define pii pair<int, int>
 #define sz(x) (int)(x).size()
 
+void init_task() {
+  // (ré)initialiser les variables globales et faire les précalculs
+}
+
 void run_task() {
+  init_task();
   // résoudre le problème ici
 }
 
