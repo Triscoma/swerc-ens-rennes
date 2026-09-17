@@ -6,7 +6,6 @@
  * - Si q est pair : q-1 matchings parfaits.
  * - Si q est impair : q matchings, chacun avec un bye (sommet non matché).
  * Chaque paire apparaît exactement une fois.
- *
  * Complexité : O(q^2)
  * Statut : testé sur Kattis
 **/
