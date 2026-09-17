@@ -21,14 +21,14 @@ vector<vector<pii>> round_robin(int q) {
             int x = a[i];
             int y = a[N-1 - i];
 
-			      // on ne push pas le sommet fictif (il est match avec le bye)
+			// on ne push pas le sommet fictif (il est match avec le bye)
             if (x < q && y < q) cur.push_back({x, y}); 
         }
         res.push_back(cur);
 
-		    // rotation sur (a[1], ..., a[N-1])
+		// rotation sur (a[1], ..., a[N-1])
         vi b(N, a[0]);
-		    b[1] = a[N-1];
+		b[1] = a[N-1];
         for (int i = 2; i < N; i++) b[i] = a[i-1];
         a = b;
     }
