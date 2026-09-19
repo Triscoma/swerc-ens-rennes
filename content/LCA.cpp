@@ -1,4 +1,4 @@
-/** LCA
+/** Lowest Common Ancester
  * Complexité : 
  *   - build en O(N log N)
  *   - query en O(1) 
