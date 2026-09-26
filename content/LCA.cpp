@@ -21,7 +21,7 @@ struct LCA {
 		// tin[lca(x, y)] = min { A[i] | tin[x] < i <= tin[y] }
         int c = 0;
         vi st = {root};
-        while (!st.empty()) {
+        while (sz(st)) {
             int u = st.back(); st.pop_back();
             tin[u] = c; inv[c++] = u;
             for (int v : g[u]) st.push_back(v);
